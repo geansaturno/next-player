@@ -1,0 +1,17 @@
+.header {
+    align-items: center;
+    display: flex;
+    background-color: #1D1D1D;
+    min-height: 130px;
+}
+
+.logo {
+    font-family: Nokora;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 120%;
+    background: linear-gradient(180deg, #00F2D5 0%, #AD00FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
