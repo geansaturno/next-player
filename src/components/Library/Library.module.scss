@@ -1,48 +1,67 @@
-
 .section {
-    padding-top: 32px;
-    background-color: #000;
+  padding-top: 32px;
+  background-color: #000;
+}
+
+.header {
+  display: flex;
+  flex-direction: column-reverse;
+
+  &_title {
+    color: #fff;
+    font-family: Articulat CF;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 120%;
+  }
+
+  &_desc {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Articulat CF;
+    font-weight: 500;
+    line-height: 120%;
+    margin-top: 12px;
+  }
 }
 
 .wrapper {
-    display: flex;
-    gap: 34px;
-    flex-direction: column;
+  display: flex;
+  gap: 34px;
+  flex-direction: column;
 }
 
 .cover {
-    width: 100%;
-    border-radius: 5px;
-    overflow: hidden;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .image {
-    width: 100%;
-    display: block;
+  width: 100%;
+  display: block;
 }
 
 .content {
-    background-color: #262626;
-    padding: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+  background-color: #262626;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .title {
-    color: #FFF;
-    font-family: Articulat CF;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 108%;
-    margin-bottom: 12px;
+  color: #fff;
+  font-family: Articulat CF;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 108%;
+  margin-bottom: 12px;
 }
 
 .artist {
-    color: #666;
-    font-family: Articulat CF;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 120%;
+  color: #666;
+  font-family: Articulat CF;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 120%;
 }
-
