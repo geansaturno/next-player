@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import style from './Library.module.scss'
 import Link from 'next/link'
 import AlbumCard from '../AlbumCard/AlbumCard'
