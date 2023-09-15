@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import style from './Library.module.scss'
 import Link from 'next/link'
+import AlbumCard from '../AlbumCard/AlbumCard'
 
 export default function Library({songs}) {
 
@@ -18,20 +19,8 @@ export default function Library({songs}) {
             <div className={style.wrapper}>
                 {
                     songs.map((song) =>  
-                    <Link key={song.id} className={style.cover} href={`/${encodeURIComponent(song.id)}`}>
-                        <Image className={style.image}
-                            src={`/assets/images/${song.song.files.coverArt}`}
-                            width={204}
-                            height={204}
-                            alt={`${song.song.title} - ${song.song.artist}`}
-                        />
-                        <div className={style.content}>
-                            <div>
-                                <p className={style.title}>{song.song.title}</p> 
-                                <p className={style.artist}>{song.song.artist}</p> 
-                            </div>
-                            <button>Like</button>
-                        </div>
+                    <Link key={song.id} href={`/${encodeURIComponent(song.id)}`}>
+                       <AlbumCard song={song}/>
                     </Link>
                     )
                 }

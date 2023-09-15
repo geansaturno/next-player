@@ -1,10 +1,9 @@
 "use client";
 
-import Image from "next/image";
-
 import style from "./Song.module.scss";
 import { useState } from "react";
 import { Play } from "../../icons/Play";
+import AlbumImage from "../AlbumImage/AlbumImage";
 
 export default function Song(song) {
   const [audio] = useState(new Audio(`/assets/audio/${song.song.files.audio}`));
@@ -19,12 +18,9 @@ export default function Song(song) {
 
   return (
     <section className={`${style.section} container`}>
-      <Image
+      <AlbumImage
         className={style.image}
-        src={`/assets/images/${song.song.files.coverArt}`}
-        width={204}
-        height={204}
-        alt={`${song.song.title} - ${song.song.artist}`}
+        song={song}
       />
       <div className={style.data}>
         <p className={style.title}>{song.song.title}</p>
