@@ -33,8 +33,6 @@ export default function Song(song) {
           {isPlaying ? <span>| |</span> : <Play className={style.icon} />}
         </button>
       </div>
-
-      <p>Other albums</p>
     </section>
   );
 }
