@@ -7,11 +7,11 @@ import { useState } from "react";
 import { Play } from "../../icons/Play";
 
 export default function Song(song) {
-  const [audio] = useState(new Audio(`/assets/audio/${song.song.files.audio}`))
-  const [isPlaying, setPlayState] = useState(false)
+  const [audio] = useState(new Audio(`/assets/audio/${song.song.files.audio}`));
+  const [isPlaying, setPlayState] = useState(false);
 
-  audio.onplay = () => (setPlayState(true));
-  audio.onpause = () => (setPlayState(false));
+  audio.onplay = () => setPlayState(true);
+  audio.onpause = () => setPlayState(false);
 
   function tooglePlay() {
     isPlaying ? audio.pause() : audio.play();
@@ -32,11 +32,9 @@ export default function Song(song) {
         <p className={style.desc}>
           {`${song.song.artist} | ${song.song.album.title} | ${song.song.album.year}`}
         </p>
-        
-        <audio src={`/assets/audio/${song.song.files.audio}`}/>
 
         <button onClick={tooglePlay} className={style.button}>
-            {isPlaying ? <span>| |</span> : <Play className={style.icon} />}
+          {isPlaying ? <span>| |</span> : <Play className={style.icon} />}
         </button>
       </div>
 
