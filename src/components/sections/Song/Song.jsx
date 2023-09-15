@@ -17,12 +17,10 @@ export default function Song(song) {
   }
 
   return (
-    <section className={`${style.section} container`}>
-      <AlbumImage
-        className={style.image}
-        song={song}
-      />
-      <div className={style.data}>
+    <section className={`${style.section}`}>
+      <div className={`container ${style.container}`}>
+        <AlbumImage className={style.image} song={song} />
+
         <p className={style.title}>{song.song.title}</p>
 
         <p className={style.desc}>
