@@ -6,6 +6,7 @@
 .header {
   display: flex;
   flex-direction: column-reverse;
+  margin-bottom: 40px;
 
   &_title {
     color: #fff;
@@ -27,5 +28,10 @@
 .wrapper {
   display: flex;
   gap: 34px;
-  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.card {
+  flex: 0 1 204px;
 }
