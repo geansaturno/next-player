@@ -13,7 +13,5 @@ async function getData(id) {
 export default async function Page({params}) {
   const data = await getData(params.song)
 
-    console.log('data', data)
-
   return <Song song={data.song}/>
 }
