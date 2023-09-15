@@ -1,4 +1,4 @@
-import Header from "../src/components/Header/Header";
+import Header from '../src/components/structure/Header/Header'
 import '../styles/globals/index.scss'
 
 export default function RootLayout({children}) {

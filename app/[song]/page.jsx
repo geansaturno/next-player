@@ -1,4 +1,4 @@
-import Song from "../../src/components/Song/Song"
+import Song from "../../src/components/sections/Song/Song"
 
 async function getData(id) {
     const res = await fetch(`http://localhost:3000/songs/${id}`)

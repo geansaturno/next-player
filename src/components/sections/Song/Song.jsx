@@ -2,8 +2,8 @@
 
 import style from "./Song.module.scss";
 import { useState } from "react";
-import { Play } from "../../icons/Play";
-import AlbumImage from "../AlbumImage/AlbumImage";
+import { Play } from "../../../icons/Play";
+import AlbumImage from "../../shared/AlbumImage/AlbumImage";
 
 export default function Song(song) {
   const [audio] = useState(new Audio(`/assets/audio/${song.song.files.audio}`));

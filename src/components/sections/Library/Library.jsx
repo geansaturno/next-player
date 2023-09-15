@@ -1,5 +1,5 @@
+import AlbumCard from "../../shared/AlbumCard/AlbumCard";
 import style from "./Library.module.scss";
-import AlbumCard from "../AlbumCard/AlbumCard";
 
 export default function Library({ songs }) {
   return (

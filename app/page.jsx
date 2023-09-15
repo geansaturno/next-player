@@ -1,4 +1,4 @@
-import Library from "../src/components/Library/Library"
+import Library from "../src/components/sections/Library/Library"
 
 async function getData() {
   const res = await fetch('http://localhost:3000/songs')
