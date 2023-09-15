@@ -3,25 +3,19 @@
 import Image from "next/image";
 
 import style from "./Song.module.scss";
-import { useEffect } from "react";
+import { useState } from "react";
 import { Play } from "../../icons/Play";
 
 export default function Song(song) {
-  let isPlaying = false;
-  let audio;
+  const [audio] = useState(new Audio(`/assets/audio/${song.song.files.audio}`))
+  const [isPlaying, setPlayState] = useState(false)
+
+  audio.onplay = () => (setPlayState(true));
+  audio.onpause = () => (setPlayState(false));
 
   function tooglePlay() {
     isPlaying ? audio.pause() : audio.play();
   }
-
-  useEffect(() => {
-    audio = new Audio(`/assets/audio/${song.song.files.audio}`);
-
-    if (audio) {
-      audio.onplay = () => (isPlaying = true);
-      audio.onpause = () => (isPlaying = false);
-    }
-  });
 
   return (
     <section className={`${style.section} container`}>
@@ -38,9 +32,11 @@ export default function Song(song) {
         <p className={style.desc}>
           {`${song.song.artist} | ${song.song.album.title} | ${song.song.album.year}`}
         </p>
+        
+        <audio src={`/assets/audio/${song.song.files.audio}`}/>
 
         <button onClick={tooglePlay} className={style.button}>
-          <Play className={style.icon} />
+            {isPlaying ? <span>| |</span> : <Play className={style.icon} />}
         </button>
       </div>
 
